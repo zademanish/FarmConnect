@@ -27,9 +27,9 @@ jobs:
         working-directory: frontend
         run: npm ci
 
-      - name: Run ESLint
+      - name: Run Oxlint
         working-directory: frontend
-        run: npx eslint .
+        run: npx oxlint .
 
       - name: Run Prettier
         working-directory: frontend
