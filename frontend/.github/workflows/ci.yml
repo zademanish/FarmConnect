@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  code-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v7
+
+      - name: set up node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20
+
+      - name: install dependencies
+        run : npm ci
+
+      - name: run Linter
+        uses: wearerequire/lint-actions@v2
+        with:
+          eslint: true
+          prettier: true
+          
+      
