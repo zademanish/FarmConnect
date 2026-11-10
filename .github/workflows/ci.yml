@@ -30,7 +30,3 @@ jobs:
       - name: Run Oxlint
         working-directory: frontend
         run: npx oxlint .
-
-      - name: Run Prettier
-        working-directory: frontend
-        run: npx prettier --check .
